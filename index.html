@@ -1,254 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Maritime Law & Arbitration Firm</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1f2933;
-            line-height: 1.6;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #1e293b;
+        line-height: 1.65;
+        background-color: #f8fafc;
+      }
 
-        /* NAVBAR */
-        .navbar {
-            background-color: #0f172a;
-        }
-        .navbar-brand,
-        .nav-link {
-            color: #e5e7eb !important;
-        }
-        .nav-link:hover {
-            color: #94a3b8 !important;
-        }
+      /* NAVBAR */
+      .navbar {
+        background-color: #0b2545;
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #f1f5f9 !important;
+      }
+      .nav-link:hover {
+        color: #93c5fd !important;
+      }
 
-        /* HERO */
-        .hero {
-            background: linear-gradient(
-                rgba(15, 23, 42, 0.85),
-                rgba(15, 23, 42, 0.85)
-            ),
-            url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-            color: #f8fafc;
-            padding: 120px 0;
-        }
-        .hero h1 {
-            font-weight: 600;
-        }
+      .hero {
+        background: linear-gradient(
+            rgba(11, 37, 69, 0.78),
+            rgba(11, 37, 69, 0.78)
+          ),
+          url("https://images.unsplash.com/photo-1505839673365-e3971f8d9184")
+            center/cover no-repeat;
+        color: #f8fafc;
+        padding: 150px 0;
+      }
 
-        /* SECTION HEADERS */
-        .section-title {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .section-subtitle {
-            color: #64748b;
-            max-width: 700px;
-        }
+      .hero h1 {
+        font-weight: 600;
+      }
 
-        /* SERVICES */
-        .service-card {
-            border: none;
-            background: #f8fafc;
-            transition: transform 0.2s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-4px);
-        }
+      /* SECTIONS */
+      .section-title {
+        font-weight: 600;
+        color: #0b2545;
+      }
+      .section-subtitle {
+        color: #475569;
+        max-width: 720px;
+        margin: 0 auto;
+      }
 
-        /* FOOTER */
-        footer {
-            background-color: #0f172a;
-            color: #cbd5e1;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #e5e7eb;
-        }
+      /* CARDS */
+      .service-card {
+        background: #ffffff;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+      }
+
+      /* IMAGES */
+      .rounded-img {
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: #0b2545;
+        color: #cbd5f5;
+        font-size: 0.9rem;
+      }
     </style>
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
         <a class="navbar-brand fw-semibold" href="#">Your Firm Name</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#arbitration">Arbitration</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#arbitration">Arbitration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- HERO -->
-<section class="hero text-center">
-    <div class="container">
-        <h1 class="display-5 mb-3">
-            Maritime Law & International Arbitration
-        </h1>
+    <!-- HERO -->
+    <section class="hero text-center">
+      <div class="container" data-aos="fade-up">
+        <h1 class="display-5 mb-3">Maritime Law & International Arbitration</h1>
         <p class="lead mb-4">
-            Providing strategic, high-quality legal solutions in maritime trade,
-            shipping disputes, and international arbitration.
+          Strategic legal solutions for maritime trade, shipping disputes, and
+          international arbitration.
         </p>
         <a href="#contact" class="btn btn-outline-light btn-lg">
-            Request Consultation
+          Request Consultation
         </a>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-5">
-    <div class="container">
-        <div class="row justify-content-center text-center mb-4">
-            <div class="col-lg-8">
-                <h2 class="section-title">About Our Firm</h2>
-                <p class="section-subtitle">
-                    Our firm primarily specialises in maritime law and arbitration,
-                    offering a wide range of legal services in maritime trade law.
-                    We deliver creative, professional, and high-quality legal solutions
-                    tailored to complex international disputes.
-                </p>
-            </div>
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2 class="section-title mb-3">About Our Firm</h2>
+            <p>
+              Our firm primarily specialises in maritime law and arbitration,
+              offering a wide range of legal services in maritime trade law.
+            </p>
+            <p>
+              We provide creative, professional, and high-quality legal
+              solutions for complex cross-border disputes.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0"
+              class="img-fluid rounded-img"
+              alt="Lawyers in suits"
+            />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-5 bg-light">
-    <div class="container">
-        <div class="row mb-4 text-center">
-            <div class="col">
-                <h2 class="section-title">Legal Services</h2>
-            </div>
+    <!-- SERVICES -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Legal Services</h2>
         </div>
 
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card service-card p-4 h-100">
-                    <h5 class="fw-semibold">Maritime & Shipping Law</h5>
-                    <p class="text-muted">
-                        Advising shipowners, charterers, and operators on maritime disputes,
-                        contracts, and regulatory compliance.
-                    </p>
-                </div>
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="service-card p-4 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1505839673365-e3971f8d9184"
+                class="img-fluid rounded mb-3"
+                alt="Cargo ship"
+              />
+              <h5 class="fw-semibold">Maritime & Shipping Law</h5>
+              <p class="text-muted">
+                Advising shipowners and operators on maritime disputes and
+                contracts.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-4">
-                <div class="card service-card p-4 h-100">
-                    <h5 class="fw-semibold">Maritime Trade Law</h5>
-                    <p class="text-muted">
-                        Legal support for international trade, carriage of goods,
-                        charterparty disputes, and cargo claims.
-                    </p>
-                </div>
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-card p-4 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2"
+                class="img-fluid rounded mb-3"
+                alt="Port logistics"
+              />
+              <h5 class="fw-semibold">Maritime Trade Law</h5>
+              <p class="text-muted">
+                International trade, carriage of goods, and cargo claims.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-4">
-                <div class="card service-card p-4 h-100">
-                    <h5 class="fw-semibold">Regulatory & Compliance</h5>
-                    <p class="text-muted">
-                        Guidance on international maritime regulations, sanctions,
-                        and cross-border compliance obligations.
-                    </p>
-                </div>
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card p-4 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                class="img-fluid rounded mb-3"
+                alt="Business meeting"
+              />
+              <h5 class="fw-semibold">Regulatory & Compliance</h5>
+              <p class="text-muted">
+                International maritime regulations and compliance advisory.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ARBITRATION -->
-<section id="arbitration" class="py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="section-title">International Arbitration</h2>
-                <p>
-                    We represent clients in complex maritime and commercial arbitration
-                    proceedings under major international arbitration rules.
-                </p>
-                <p>
-                    Our approach is pragmatic, strategic, and focused on protecting
-                    commercial interests in high-stakes disputes.
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Maritime & Shipping Arbitration</li>
-                    <li class="list-group-item">Commercial Arbitration</li>
-                    <li class="list-group-item">Enforcement of Arbitral Awards</li>
-                    <li class="list-group-item">Cross-Border Dispute Resolution</li>
-                </ul>
-            </div>
+    <!-- ARBITRATION -->
+    <section id="arbitration" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1555374018-13a8994ab246"
+              class="img-fluid rounded-img"
+              alt="Arbitration meeting"
+            />
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="section-title mb-3">International Arbitration</h2>
+            <p>
+              Representation in high-value maritime and commercial arbitration
+              under major international rules.
+            </p>
+            <ul>
+              <li>Maritime Arbitration</li>
+              <li>Commercial Arbitration</li>
+              <li>Enforcement of Awards</li>
+              <li>Cross-Border Disputes</li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <div class="row text-center mb-4">
-            <div class="col">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle">
-                    For professional inquiries or consultations, please contact us.
-                </p>
-            </div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">
+            For professional inquiries, please contact our firm.
+          </p>
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-dark w-100">
-                        Submit Inquiry
-                    </button>
-                </form>
-            </div>
+          <div class="col-lg-6" data-aos="zoom-in">
+            <form>
+              <input class="form-control mb-3" placeholder="Name" />
+              <input class="form-control mb-3" placeholder="Email" />
+              <textarea
+                class="form-control mb-3"
+                rows="4"
+                placeholder="Message"
+              ></textarea>
+              <button class="btn btn-primary w-100">Submit Inquiry</button>
+            </form>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="py-4">
-    <div class="container text-center">
+    <!-- ABOUT US / TEAM -->
+    <section id="team" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">About Us</h2>
+          <p class="section-subtitle">
+            Our team combines deep maritime expertise with a pragmatic,
+            commercially focused approach to dispute resolution.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- TEAM MEMBER -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="service-card h-100 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6"
+                class="img-fluid rounded-top"
+                alt="Managing Partner"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold mb-1">Alex Morgan</h5>
+                <p class="text-muted mb-2">Managing Partner</p>
+                <p class="text-muted small">
+                  Maritime law specialist with extensive experience in
+                  international shipping disputes and arbitration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM MEMBER -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-card h-100 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61"
+                class="img-fluid rounded-top"
+                alt="Senior Associate"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold mb-1">Sofia Petrov</h5>
+                <p class="text-muted mb-2">Senior Associate</p>
+                <p class="text-muted small">
+                  Focused on maritime trade law, cargo claims, and regulatory
+                  compliance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM MEMBER -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card h-100 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39"
+                class="img-fluid rounded-top"
+                alt="Associate"
+              />
+              <div class="p-4">
+                <h5 class="fw-semibold mb-1">Daniel Wright</h5>
+                <p class="text-muted mb-2">Associate</p>
+                <p class="text-muted small">
+                  Assists in commercial arbitration, enforcement of awards, and
+                  dispute resolution matters.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+      <div class="container">
         <p class="mb-1">© 2025 Your Firm Name. All rights reserved.</p>
-        <p class="mb-0">
-            Maritime Law · Arbitration · International Trade
-        </p>
-    </div>
-</footer>
+        <p>Maritime Law · Arbitration · International Trade</p>
+      </div>
+    </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true,
+      });
+    </script>
+  </body>
 </html>
